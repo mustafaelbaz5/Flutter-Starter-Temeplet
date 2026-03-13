@@ -13,6 +13,12 @@ extension ThemeExt on BuildContext {
   bool get isDarkMode => theme.brightness == Brightness.dark;
 }
 
+extension CustomColorsExtension on ThemeData {
+  CustomColors get customColors => brightness == Brightness.light
+      ? CustomColors.light()
+      : CustomColors.dark();
+}
+
 // ─── MediaQuery ───────────────────────────────────────────────────────────────
 
 extension MediaQueryExt on BuildContext {
