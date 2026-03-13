@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/core/utils/extensions/context_ext.dart';
-import 'package:flutter_structure/core/utils/spacing.dart';
+import '../../utils/extensions/context_ext.dart';
+import '../../utils/spacing.dart';
 
 import '../app_colors.dart';
 import '../app_text_styles.dart';

@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:flutter_structure/core/api/dio_factory.dart';
-import 'package:flutter_structure/core/networking/network_info.dart';
-import 'package:flutter_structure/core/utils/app_constants.dart';
+import '../api/dio_factory.dart';
+import '../networking/network_info.dart';
+import '../utils/app_constants.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 

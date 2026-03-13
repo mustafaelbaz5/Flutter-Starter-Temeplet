@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/core/themes/app_colors.dart';
-import 'package:flutter_structure/core/themes/app_text_styles.dart';
-import 'package:flutter_structure/core/utils/extensions/context_ext.dart';
-import 'package:flutter_structure/core/widgets/custom_text_button.dart';
+import '../../../themes/app_colors.dart';
+import '../../../themes/app_text_styles.dart';
+import '../../../utils/extensions/context_ext.dart';
+import '../../custom_text_button.dart';
 
 class CustomAppDialog extends StatelessWidget {
   const CustomAppDialog({

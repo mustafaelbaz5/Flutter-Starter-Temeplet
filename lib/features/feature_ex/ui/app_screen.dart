@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/core/utils/extensions/num_ext.dart';
-import 'package:flutter_structure/core/utils/functions/app_setting_method.dart';
-import 'package:flutter_structure/core/utils/spacing.dart';
-import 'package:flutter_structure/core/widgets/custom_text_button.dart';
-import 'package:flutter_structure/core/widgets/custom_text_form_.dart';
+import '../../../core/utils/extensions/num_ext.dart';
+import '../../../core/utils/functions/app_setting_method.dart';
+import '../../../core/utils/spacing.dart';
+import '../../../core/widgets/custom_text_button.dart';
+import '../../../core/widgets/custom_text_form_.dart';
 
 class AppScreen extends StatelessWidget {
   const AppScreen({super.key});

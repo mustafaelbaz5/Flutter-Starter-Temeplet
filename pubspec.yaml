@@ -52,6 +52,7 @@ dependencies:
   # --- Utilities ---
   rename: ^3.1.0
   internet_connection_checker: ^3.0.1
+  equatable: ^2.0.8
 
 # ----------------------------------------------------------------
 # DEV DEPENDENCIES

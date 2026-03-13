@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/core/themes/app_colors.dart';
+import 'app_colors.dart';
 
 /// CustomColors — semantic theme tokens
 /// ─────────────────────────────────────
