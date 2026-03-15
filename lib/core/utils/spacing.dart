@@ -9,4 +9,4 @@ SizedBox horizontalSpacing(final double width) => SizedBox(width: width.w);
 double rw(final double width) => width.w;
 double rh(final double height) => height.h;
 double rr(final double radius) => radius.r;
-double rsp(final double fontSize) => fontSize.sp;
+double rf(final double fontSize) => fontSize.sp;
