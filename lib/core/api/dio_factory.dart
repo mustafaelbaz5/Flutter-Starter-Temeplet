@@ -6,7 +6,6 @@ import 'api_interceptors.dart';
 /// Use [DioFactory.create()] to get a configured Dio instance
 class DioFactory {
   DioFactory._();
-  static Dio? _dio;
 
   static Dio create({
     required final String baseUrl,
@@ -14,8 +13,7 @@ class DioFactory {
     final Duration timeout = const Duration(seconds: 30),
     final bool enableLogging = true,
   }) {
-    if (_dio != null) return _dio!;
-    _dio = Dio(
+    final dio = Dio(
       BaseOptions(
         baseUrl: baseUrl,
         connectTimeout: timeout,
@@ -27,11 +25,11 @@ class DioFactory {
       ),
     );
 
-    _dio!.interceptors.addAll([
+    dio.interceptors.addAll([
       AuthInterceptor(getToken: getToken),
       if (enableLogging) LoggerInterceptor(),
     ]);
 
-    return _dio!;
+    return dio;
   }
 }
