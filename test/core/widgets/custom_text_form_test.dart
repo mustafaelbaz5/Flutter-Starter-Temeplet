@@ -175,7 +175,7 @@ void main() {
               key: formKey,
               child: CustomTextForm(
                 hintText: 'Email',
-                validator: (_) => 'Email is required',
+                validator: (final _) => 'Email is required',
               ),
             ),
           ),
@@ -196,7 +196,8 @@ void main() {
           buildTestWidget(
             Form(
               key: formKey,
-              child: CustomTextForm(hintText: 'Email', validator: (_) => null),
+              child: CustomTextForm(
+                  hintText: 'Email', validator: (final _) => null),
             ),
           ),
         );

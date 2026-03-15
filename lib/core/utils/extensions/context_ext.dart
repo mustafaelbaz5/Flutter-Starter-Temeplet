@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+
 import '../../themes/app_font_family.dart';
 import '../../themes/custom_colors.dart';
 
@@ -78,20 +79,20 @@ extension SnackBarExt on BuildContext {
 
 extension NavigationExt on BuildContext {
   Future<T?> push<T>(final Widget page) =>
-      Navigator.push(this, MaterialPageRoute(builder: (_) => page));
+      Navigator.push(this, MaterialPageRoute(builder: (final _) => page));
 
   Future<T?> pushReplacement<T, TO>(final Widget page, {final TO? result}) =>
       Navigator.pushReplacement(
         this,
-        MaterialPageRoute(builder: (_) => page),
+        MaterialPageRoute(builder: (final _) => page),
         result: result,
       );
 
   Future<T?> pushAndRemoveAll<T>(final Widget page) =>
       Navigator.pushAndRemoveUntil(
         this,
-        MaterialPageRoute(builder: (_) => page),
-        (_) => false,
+        MaterialPageRoute(builder: (final _) => page),
+        (final _) => false,
       );
 
   void pop<T>([final T? result]) {
@@ -105,20 +106,22 @@ extension NavigationExt on BuildContext {
     final String routeName, {
     final Object? arguments,
     final TO? result,
-  }) => Navigator.pushReplacementNamed(
-    this,
-    routeName,
-    arguments: arguments,
-    result: result,
-  );
+  }) =>
+      Navigator.pushReplacementNamed(
+        this,
+        routeName,
+        arguments: arguments,
+        result: result,
+      );
 
   Future<T?> pushNamedAndRemoveAll<T>(
     final String routeName, {
     final Object? arguments,
-  }) => Navigator.pushNamedAndRemoveUntil(
-    this,
-    routeName,
-    (_) => false,
-    arguments: arguments,
-  );
+  }) =>
+      Navigator.pushNamedAndRemoveUntil(
+        this,
+        routeName,
+        (final _) => false,
+        arguments: arguments,
+      );
 }

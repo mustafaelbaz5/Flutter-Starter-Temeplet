@@ -9,7 +9,7 @@ void main() {
   Widget buildTestWidget(final Widget child) {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
-      builder: (final context, _) => MaterialApp(
+      builder: (final context, final _) => MaterialApp(
         theme: ThemeData.light(),
         home: Scaffold(body: child),
       ),

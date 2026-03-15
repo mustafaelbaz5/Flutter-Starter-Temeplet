@@ -22,7 +22,7 @@ void main() {
     // ─── isConnected ─────────────────────────────────────────
     group('isConnected', () {
       test('returns true when device is connected', () async {
-        when(mockChecker.hasConnection).thenAnswer((_) async => true);
+        when(mockChecker.hasConnection).thenAnswer((final _) async => true);
 
         final result = await networkInfo.isConnected;
 
@@ -30,7 +30,7 @@ void main() {
       });
 
       test('returns false when device is not connected', () async {
-        when(mockChecker.hasConnection).thenAnswer((_) async => false);
+        when(mockChecker.hasConnection).thenAnswer((final _) async => false);
 
         final result = await networkInfo.isConnected;
 
@@ -43,7 +43,7 @@ void main() {
       test('emits connected status', () async {
         when(
           mockChecker.onStatusChange,
-        ).thenAnswer((_) => Stream.value(InternetConnectionStatus.connected));
+        ).thenAnswer((final _) => Stream.value(InternetConnectionStatus.connected));
 
         expect(
           networkInfo.onStatusChange,
@@ -53,7 +53,7 @@ void main() {
 
       test('emits disconnected status', () async {
         when(mockChecker.onStatusChange).thenAnswer(
-          (_) => Stream.value(InternetConnectionStatus.disconnected),
+          (final _) => Stream.value(InternetConnectionStatus.disconnected),
         );
 
         expect(

@@ -25,7 +25,7 @@ void main() {
       test('calls storage.write with correct key and value', () async {
         // tell the mock: when write is called, return normally
         when(mockStorage.write(key: 'token', value: 'abc123')).thenAnswer((
-          _,
+          final _,
         ) async {
           return;
         });
@@ -40,7 +40,8 @@ void main() {
     // ─── read ────────────────────────────────────────────────
     group('read', () {
       test('returns value when key exists', () async {
-        when(mockStorage.read(key: 'token')).thenAnswer((_) async => 'abc123');
+        when(mockStorage.read(key: 'token'))
+            .thenAnswer((final _) async => 'abc123');
 
         final result = await secureStorage.read(key: 'token');
 
@@ -48,7 +49,8 @@ void main() {
       });
 
       test('returns null when key does not exist', () async {
-        when(mockStorage.read(key: 'token')).thenAnswer((_) async => null);
+        when(mockStorage.read(key: 'token'))
+            .thenAnswer((final _) async => null);
 
         final result = await secureStorage.read(key: 'token');
 
@@ -59,7 +61,7 @@ void main() {
     // ─── delete ──────────────────────────────────────────────
     group('delete', () {
       test('calls storage.delete with correct key', () async {
-        when(mockStorage.delete(key: 'token')).thenAnswer((_) async {
+        when(mockStorage.delete(key: 'token')).thenAnswer((final _) async {
           return;
         });
 
@@ -72,7 +74,7 @@ void main() {
     // ─── clearAll ────────────────────────────────────────────
     group('clearAll', () {
       test('calls storage.deleteAll', () async {
-        when(mockStorage.deleteAll()).thenAnswer((_) async {
+        when(mockStorage.deleteAll()).thenAnswer((final _) async {
           return;
         });
 
