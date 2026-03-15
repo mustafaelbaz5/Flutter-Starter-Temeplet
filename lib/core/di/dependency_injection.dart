@@ -11,7 +11,7 @@ import '../service/secure_storage.dart';
 
 final getIt = GetIt.instance;
 
-Future<void> setupDependencies() async {
+Future<void> setUpDependencies() async {
   // --- External ---
   getIt.registerLazySingleton(() => InternetConnectionChecker.createInstance());
   final FlutterSecureStorage flutterSecureStorage =
