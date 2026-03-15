@@ -7,8 +7,7 @@ version: 1.0.0+1
 
 # ENVIRONMENT
 environment:
-  sdk: ^3.9.2
-
+  sdk: ">=3.0.0 <4.0.0"
 
 # DEPENDENCIES
 dependencies:
@@ -16,43 +15,43 @@ dependencies:
     sdk: flutter
 
   # --- Firebase ---
-  firebase_core: ^4.5.0
-  firebase_auth: ^6.2.0
-  cloud_firestore: ^6.1.3
-  firebase_storage: ^13.1.0
+  firebase_core: any
+  firebase_auth: any
+  cloud_firestore: any
+  firebase_storage: any
 
   # --- Supabase ---
-  supabase_flutter: ^2.12.0
+  supabase_flutter: any
 
   # --- State Management ---
-  bloc: ^9.2.0
-  flutter_bloc: ^9.1.1
-  hydrated_bloc: ^10.1.1
+  bloc: any
+  flutter_bloc: any
+  hydrated_bloc: any
 
   # --- Networking ---
-  dio: ^5.9.2
+  dio: any
 
   # --- Storage & Preferences ---
-  flutter_secure_storage: ^10.0.0
-  shared_preferences: ^2.5.4
-  path_provider: ^2.1.5
+  flutter_secure_storage: any
+  shared_preferences: any
+  path_provider: any
 
   # --- Dependency Injection ---
-  get_it: ^9.2.1
+  get_it: any
 
   # --- Localization ---
-  easy_localization: ^3.0.8
+  easy_localization: any
 
   # --- UI & Design ---
-  cupertino_icons: ^1.0.8
-  google_fonts: ^8.0.2
-  flutter_screenutil: ^5.9.3
-  flutter_native_splash: ^2.4.7
+  cupertino_icons: any
+  google_fonts: any
+  flutter_screenutil: any
+  flutter_native_splash: any
 
   # --- Utilities ---
-  rename: ^3.1.0
-  internet_connection_checker: ^3.0.1
-  equatable: ^2.0.8
+  rename: any
+  internet_connection_checker: any
+  equatable: any
 
 # ----------------------------------------------------------------
 # DEV DEPENDENCIES
@@ -60,11 +59,10 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^6.0.0
-  test: ^1.26.3
-  mockito: ^5.4.0
-  build_runner: ^2.4.0
-
+  flutter_lints: any
+  test: any
+  mockito: any
+  build_runner: any
 
 # ----------------------------------------------------------------
 # FLUTTER SETTINGS
