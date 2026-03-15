@@ -36,6 +36,7 @@ class CustomTextForm extends StatefulWidget {
     this.focusedBorderColor,
     this.borderRadius,
     this.contentPadding,
+    this.isRTL = false,
   });
 
   final String hintText;
@@ -55,6 +56,7 @@ class CustomTextForm extends StatefulWidget {
   final bool autofocus;
   final bool enabled;
   final bool readOnly;
+  final bool isRTL;
 
   final TextStyle? inputTextStyle;
   final TextStyle? hintStyle;
@@ -90,8 +92,7 @@ class _CustomTextFormState extends State<CustomTextForm> {
   Widget build(final BuildContext context) {
     final colors = context.customColors;
 
-    // Direction follows app locale
-    final textDirection = context.isRTL ? TextDirection.rtl : TextDirection.ltr;
+    final textDirection = widget.isRTL ? TextDirection.rtl : TextDirection.ltr;
 
     final TextStyle effectiveInputStyle =
         widget.inputTextStyle ??
@@ -119,7 +120,7 @@ class _CustomTextFormState extends State<CustomTextForm> {
       enabled: widget.enabled,
       readOnly: widget.readOnly,
       textDirection: textDirection,
-      textAlign: context.isRTL ? TextAlign.right : TextAlign.left,
+      textAlign: widget.isRTL ? TextAlign.right : TextAlign.left,
       style: effectiveInputStyle,
       validator: widget.validator,
       onChanged: widget.onChanged,
