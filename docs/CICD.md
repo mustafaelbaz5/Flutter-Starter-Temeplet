@@ -265,7 +265,7 @@ Add a new job to the workflow:
           channel: stable
       - run: flutter pub get
       - run: flutter test
-      - run: flutter build ipa --flavor production --target lib/main_production.dart
+      - run: flutter build ipa --flavor production --target lib/main_prod.dart
 ```
 
 ### Trigger on pull requests too
