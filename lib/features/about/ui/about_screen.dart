@@ -1,5 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_structure/core/utils/functions/app_setting_method.dart';
 import 'package:flutter_structure/core/utils/functions/url_launcher.dart';
 
 import '../../../core/config/app_config.dart';
@@ -23,7 +23,7 @@ class AboutScreen extends StatelessWidget {
       backgroundColor: colors.background,
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: EdgeInsets.symmetric(horizontal: rw(24)),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,42 +37,44 @@ class AboutScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(4),
                   child: Icon(
                     Icons.arrow_back_ios_new_rounded,
-                    size: 20,
+                    size: rr(20),
                     color: colors.textPrimary,
                   ),
                 ),
               ),
-              verticalSpacing(32),
+              verticalSpacing(24),
 
               // ── App Header ────────────────────────────────────────
               const AboutAppHeader(),
-              verticalSpacing(40),
+              verticalSpacing(20),
 
               // ── App Info ──────────────────────────────────────────
-              const AboutSectionLabel('App Info'),
+              AboutSectionLabel('about.sections.app_info'.tr()),
               verticalSpacing(12),
               AboutFlatRow(
                 icon: Icons.smartphone_rounded,
-                label: 'Platform',
-                trailing: isIos ? 'iOS' : 'Android',
+                label: 'about.app_info.platform'.tr(),
+                trailing: isIos
+                    ? 'about.app_info.platform_ios'.tr()
+                    : 'about.app_info.platform_android'.tr(),
               ),
               AboutFlatRow(
                 icon: Icons.grid_view_rounded,
-                label: 'Package',
+                label: 'about.app_info.package'.tr(),
                 trailing: isIos
                     ? AboutConstants.iosStoreUrl.split('/').last
                     : AboutConstants.androidStoreUrl.split('=').last,
               ),
               AboutFlatRow(
                 icon: Icons.update_rounded,
-                label: 'Last Updated',
+                label: 'about.app_info.last_updated'.tr(),
                 trailing: _currentYear,
                 showDivider: false,
               ),
-              verticalSpacing(40),
+              verticalSpacing(20),
 
               // ── Developer ─────────────────────────────────────────
-              const AboutSectionLabel('Developer'),
+              AboutSectionLabel('about.sections.developer'.tr()),
               verticalSpacing(12),
               const AboutFlatRow(
                 icon: Icons.person_outline_rounded,
@@ -81,21 +83,21 @@ class AboutScreen extends StatelessWidget {
               AboutFlatRow(
                 icon: Icons.email_outlined,
                 label: AppConfig.developerEmail,
-                onTap: () => switchLanguage(context),
-                // onTap: () => AppLauncher.openEmail(
-                //   to: AppConfig.developerEmail,
-                //   subject: AboutConstants.contactSubject,
-                // ),
+                // onTap: () => switchTheme(context),
+                onTap: () => AppLauncher.openEmail(
+                  to: AppConfig.developerEmail,
+                  subject: AboutConstants.contactSubject,
+                ),
               ),
-
-              verticalSpacing(40),
+              verticalSpacing(20),
 
               // ── Support ───────────────────────────────────────────
-              const AboutSectionLabel('Support'),
+              AboutSectionLabel('about.sections.support'.tr()),
               verticalSpacing(12),
               AboutFlatRow(
                 icon: Icons.star_outline_rounded,
-                label: 'Rate the App',
+                label: 'about.support.rate_app'.tr(),
+                // onTap: () => switchLanguage(context)
                 onTap: () => AppLauncher.openStore(
                   androidUrl: AboutConstants.androidStoreUrl,
                   iosUrl: AboutConstants.iosStoreUrl,
@@ -104,7 +106,7 @@ class AboutScreen extends StatelessWidget {
               ),
               AboutFlatRow(
                 icon: Icons.bug_report_outlined,
-                label: 'Report a Bug',
+                label: 'about.support.report_bug'.tr(),
                 onTap: () => AppLauncher.openEmail(
                   to: AppConfig.developerEmail,
                   subject: AboutConstants.bugReportSubject,
@@ -113,35 +115,35 @@ class AboutScreen extends StatelessWidget {
               ),
               AboutFlatRow(
                 icon: Icons.mail_outline_rounded,
-                label: 'Contact Us',
+                label: 'about.support.contact_us'.tr(),
                 onTap: () => AppLauncher.openEmail(
                   to: AppConfig.developerEmail,
                   subject: AboutConstants.contactSubject,
                 ),
                 showDivider: false,
               ),
-              verticalSpacing(40),
+              verticalSpacing(20),
 
               // ── Legal ─────────────────────────────────────────────
-              const AboutSectionLabel('Legal'),
+              AboutSectionLabel('about.sections.legal'.tr()),
               verticalSpacing(12),
               AboutFlatRow(
                 icon: Icons.privacy_tip_outlined,
-                label: 'Privacy Policy',
+                label: 'about.legal.privacy_policy'.tr(),
                 onTap: () => AppLauncher.openUrl(
                   AboutConstants.privacyPolicyUrl,
                 ),
               ),
               AboutFlatRow(
                 icon: Icons.description_outlined,
-                label: 'Terms of Service',
+                label: 'about.legal.terms_of_service'.tr(),
                 onTap: () => AppLauncher.openUrl(
                   AboutConstants.termsOfServiceUrl,
                 ),
               ),
               AboutFlatRow(
                 icon: Icons.article_outlined,
-                label: 'Open Source Licenses',
+                label: 'about.legal.open_source_licenses'.tr(),
                 onTap: () => showLicensePage(
                   context: context,
                   applicationName: AppConfig.appName,
@@ -149,7 +151,7 @@ class AboutScreen extends StatelessWidget {
                 ),
                 showDivider: false,
               ),
-              verticalSpacing(56),
+              verticalSpacing(32),
 
               // ── Footer ────────────────────────────────────────────
               Center(
@@ -163,7 +165,7 @@ class AboutScreen extends StatelessWidget {
                     ),
                     verticalSpacing(4),
                     Text(
-                      'Made with ❤ by ${AppConfig.developerName}',
+                      '${'about.footer.made_with_love'.tr()} ${AppConfig.developerName}',
                       style: AppTextStyles.font12Regular.copyWith(
                         color: colors.textHint,
                       ),

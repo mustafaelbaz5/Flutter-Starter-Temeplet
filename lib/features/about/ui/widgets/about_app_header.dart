@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_structure/core/utils/app_assets.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../../core/config/app_config.dart';
 import '../../../../core/themes/app_colors.dart';
@@ -17,19 +20,15 @@ class AboutAppHeader extends StatelessWidget {
       children: [
         // App icon
         Container(
-          width: 64,
-          height: 64,
+          width: rw(64),
+          height: rh(64),
           decoration: BoxDecoration(
-            color: AppColors.primary200.withOpacity(0.1),
+            color: AppColors.grey500.withAlpha(50),
             borderRadius: BorderRadius.circular(18),
           ),
-          child: const Icon(
-            Icons.apps_rounded, // TODO: replace with your app icon
-            color: AppColors.primary200,
-            size: 30,
-          ),
+          child: SvgPicture.asset(AppAssets.appLogoSvg),
         ),
-        const SizedBox(width: 16),
+        horizontalSpacing(16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -50,19 +49,19 @@ class AboutAppHeader extends StatelessWidget {
             if (AppConfig.isDevelopment) ...[
               verticalSpacing(6),
               Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 8,
-                  vertical: 3,
+                alignment: Alignment.center,
+                padding: EdgeInsets.symmetric(
+                  horizontal: rw(8),
+                  vertical: rh(4),
                 ),
                 decoration: BoxDecoration(
-                  color: AppColors.amber200.withOpacity(0.12),
-                  borderRadius: BorderRadius.circular(20),
+                  color: AppColors.primary400,
+                  borderRadius: BorderRadius.circular(rr(8)),
                 ),
                 child: Text(
-                  'Development',
-                  style: AppTextStyles.font12Regular.copyWith(
-                    color: AppColors.amber200,
-                  ),
+                  'about.app_info.development_badge'.tr(),
+                  style:
+                      AppTextStyles.font12Bold.copyWith(color: AppColors.white),
                 ),
               ),
             ],

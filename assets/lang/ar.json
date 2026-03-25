@@ -27,5 +27,34 @@
     "file_too_large": "الملف كبير جداً.",
     "user_disabled": "تم تعطيل هذا الحساب.",
     "operation_not_allowed": "هذه العملية غير مسموح بها."
+  },
+    "about": {
+    "sections": {
+      "app_info": "معلومات التطبيق",
+      "developer": "المطور",
+      "support": "الدعم",
+      "legal": "قانوني"
+    },
+    "app_info": {
+      "platform": "المنصة",
+      "platform_ios": "iOS",
+      "platform_android": "Android",
+      "package": "الحزمة",
+      "last_updated": "آخر تحديث",
+      "development_badge": "وضع التطوير"
+    },
+    "support": {
+      "rate_app": "قيّم التطبيق",
+      "report_bug": "الإبلاغ عن خطأ",
+      "contact_us": "تواصل معنا"
+    },
+    "legal": {
+      "privacy_policy": "سياسة الخصوصية",
+      "terms_of_service": "شروط الخدمة",
+      "open_source_licenses": "تراخيص المصدر المفتوح"
+    },
+    "footer": {
+      "made_with_love": "صُنع بـ ❤ بواسطة"
+    }
   }
 }

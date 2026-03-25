@@ -27,5 +27,34 @@
     "file_too_large": "File is too large.",
     "user_disabled": "This account has been disabled.",
     "operation_not_allowed": "This operation is not allowed."
+  },
+  "about": {
+    "sections": {
+      "app_info": "App Info",
+      "developer": "Developer",
+      "support": "Support",
+      "legal": "Legal"
+    },
+    "app_info": {
+      "platform": "Platform",
+      "platform_ios": "iOS",
+      "platform_android": "Android",
+      "package": "Package",
+      "last_updated": "Last Updated",
+      "development_badge": "Development"
+    },
+    "support": {
+      "rate_app": "Rate the App",
+      "report_bug": "Report a Bug",
+      "contact_us": "Contact Us"
+    },
+    "legal": {
+      "privacy_policy": "Privacy Policy",
+      "terms_of_service": "Terms of Service",
+      "open_source_licenses": "Open Source Licenses"
+    },
+    "footer": {
+      "made_with_love": "Made with ❤ by"
+    }
   }
 }
