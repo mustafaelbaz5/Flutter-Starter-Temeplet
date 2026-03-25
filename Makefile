@@ -10,6 +10,12 @@
 install:
 	flutter pub get
 
+updata_icon:
+	flutter pub add flutter_launcher_icons --dev
+	flutter pub get
+	dart run flutter_launcher_icons
+	
+
 ## Check outdated and upgrade all packages
 update:
 	flutter pub outdated

@@ -1,15 +1,17 @@
 name: flutter_structure
 description: "A new Flutter project."
-
 publish_to: "none"
-
 version: 1.0.0+1
 
+# ----------------------------------------------------------------
 # ENVIRONMENT
+# ----------------------------------------------------------------
 environment:
   sdk: ">=3.0.0 <4.0.0"
 
+# ----------------------------------------------------------------
 # DEPENDENCIES
+# ----------------------------------------------------------------
 dependencies:
   flutter:
     sdk: flutter
@@ -53,6 +55,7 @@ dependencies:
   internet_connection_checker: any
   equatable: any
   url_launcher: ^6.3.2
+  flutter_svg: ^2.2.4
 
 # ----------------------------------------------------------------
 # DEV DEPENDENCIES
@@ -64,6 +67,7 @@ dev_dependencies:
   test: any
   mockito: any
   build_runner: any
+  flutter_launcher_icons: ^0.14.4
 
 # ----------------------------------------------------------------
 # FLUTTER SETTINGS
@@ -71,11 +75,13 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  # --- Assets ---
   assets:
     - assets/images/
     - assets/svgs/
     - assets/lang/
 
+  # --- Fonts ---
   fonts:
     - family: Manrope
       fonts:
@@ -110,3 +116,13 @@ flutter:
           weight: 800
         - asset: assets/fonts/tajawal/Tajawal-Black.ttf
           weight: 900
+
+# ----------------------------------------------------------------
+# APP ICON
+# ----------------------------------------------------------------
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_Logo.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/images/app_Logo.png"
