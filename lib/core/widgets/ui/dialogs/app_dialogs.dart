@@ -16,6 +16,7 @@ class AppDialogs {
     final VoidCallback? onPressed,
   }) {
     return _show(
+      barrierDismissible: false,
       context,
       CustomAppDialog(
         title: title ?? 'app_dialogs.info'.tr(),
@@ -37,6 +38,7 @@ class AppDialogs {
     final VoidCallback? onPressed,
   }) {
     return _show(
+      barrierDismissible: false,
       context,
       CustomAppDialog(
         title: title ?? 'app_dialogs.success'.tr(),
@@ -58,6 +60,7 @@ class AppDialogs {
     final VoidCallback? onPressed,
   }) {
     return _show(
+      barrierDismissible: false,
       context,
       CustomAppDialog(
         title: title ?? 'app_dialogs.error'.tr(),
@@ -79,6 +82,7 @@ class AppDialogs {
     final VoidCallback? onPressed,
   }) {
     return _show(
+      barrierDismissible: false,
       context,
       CustomAppDialog(
         title: title ?? 'app_dialogs.warning'.tr(),
@@ -102,6 +106,7 @@ class AppDialogs {
     final VoidCallback? onCancel,
   }) {
     return _show(
+      barrierDismissible: false,
       context,
       CustomAppDialog(
         title: title ?? 'app_dialogs.confirm'.tr(),

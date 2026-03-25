@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_structure/core/utils/spacing.dart';
+
 import '../../../themes/app_colors.dart';
 import '../../../themes/app_text_styles.dart';
 import '../../../utils/extensions/context_ext.dart';
@@ -39,18 +41,20 @@ class CustomAppDialog extends StatelessWidget {
     final colors = context.customColors;
 
     return Dialog(
-      insetPadding: const EdgeInsets.symmetric(horizontal: 32),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      insetPadding: EdgeInsets.symmetric(horizontal: rw(32)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(rr(16)),
+      ),
       backgroundColor: colors.surface,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+        padding: EdgeInsets.all(rw(24)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             // ─── Icon ───────────────────────────────────
             if (icon != null) ...[
               Container(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(rw(16)),
                 decoration: BoxDecoration(
                   color:
                       (iconBackgroundColor ?? iconColor ?? AppColors.primary200)
@@ -59,11 +63,11 @@ class CustomAppDialog extends StatelessWidget {
                 ),
                 child: Icon(
                   icon,
-                  size: 32,
+                  size: rf(32),
                   color: iconColor ?? AppColors.primary200,
                 ),
               ),
-              const SizedBox(height: 16),
+              verticalSpacing(16),
             ],
 
             // ─── Title ──────────────────────────────────
@@ -75,7 +79,7 @@ class CustomAppDialog extends StatelessWidget {
                   color: colors.textPrimary,
                 ),
               ),
-              const SizedBox(height: 8),
+              verticalSpacing(8),
             ],
 
             // ─── Message ────────────────────────────────
@@ -86,7 +90,7 @@ class CustomAppDialog extends StatelessWidget {
                 color: colors.textSecondary,
               ),
             ),
-            const SizedBox(height: 24),
+            verticalSpacing(16),
 
             // ─── Buttons ────────────────────────────────
             if (secondaryButtonText != null)
@@ -102,7 +106,7 @@ class CustomAppDialog extends StatelessWidget {
                       },
                     ),
                   ),
-                  const SizedBox(width: 12),
+                  horizontalSpacing(8),
                   Expanded(
                     child: CustomTextButton(
                       text: primaryButtonText,
