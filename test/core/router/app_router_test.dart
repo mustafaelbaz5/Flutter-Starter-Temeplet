@@ -17,10 +17,10 @@ void main() {
     // ✅ replaced: no longer renders AppScreen, just checks route name
     test('returns route with correct name for appScreen', () {
       final route = AppRouter.generateRoute(
-        const RouteSettings(name: Routes.appScreen),
+        const RouteSettings(name: Routes.aboutScreen),
       );
 
-      expect(route.settings.name, equals(Routes.appScreen));
+      expect(route.settings.name, equals(Routes.aboutScreen));
     });
 
     // test('returns route with correct name for home', () {
@@ -40,17 +40,17 @@ void main() {
 
     test('generateRoute returns a PageRouteBuilder', () {
       final route = AppRouter.generateRoute(
-        const RouteSettings(name: Routes.appScreen),
+        const RouteSettings(name: Routes.aboutScreen),
       );
 
       expect(route, isA<PageRouteBuilder>());
     });
 
     test('generateRoute preserves route settings', () {
-      const settings = RouteSettings(name: Routes.appScreen);
+      const settings = RouteSettings(name: Routes.aboutScreen);
       final route = AppRouter.generateRoute(settings);
 
-      expect(route.settings.name, equals(Routes.appScreen));
+      expect(route.settings.name, equals(Routes.aboutScreen));
     });
   });
 }

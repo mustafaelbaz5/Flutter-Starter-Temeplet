@@ -2,15 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_structure/core/router/routes.dart';
-import 'package:flutter_structure/features/feature_ex/ui/app_screen.dart';
+import 'package:flutter_structure/features/about/ui/about_screen.dart';
 
 class AppRouter {
   AppRouter._();
 
   static Route<dynamic> generateRoute(final RouteSettings settings) {
     switch (settings.name) {
-      case Routes.appScreen:
-        return _buildRoute(const AppScreen(), settings);
+      case Routes.aboutScreen:
+        return _buildRoute(const AboutScreen(), settings);
       // case Routes.onboarding:
       //   return _buildRoute(const OnboardingScreen(), settings);
       // case Routes.home:

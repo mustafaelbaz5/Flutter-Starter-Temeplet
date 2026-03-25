@@ -1,3 +1,3 @@
 class Routes {
-  static const String appScreen = '/appScreen';
+  static const String aboutScreen = '/aboutScreen';
 }

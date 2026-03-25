@@ -27,7 +27,7 @@ class KApp extends StatelessWidget {
                 supportedLocales: context.supportedLocales,
                 locale: context.locale,
                 debugShowCheckedModeBanner: false,
-                initialRoute: Routes.appScreen,
+                initialRoute: Routes.aboutScreen,
                 onGenerateRoute: AppRouter.generateRoute,
                 title: 'App Title',
                 theme: getLightTheme(context: context),
