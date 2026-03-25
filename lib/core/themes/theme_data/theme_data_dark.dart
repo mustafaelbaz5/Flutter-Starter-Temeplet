@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import '../../utils/extensions/context_ext.dart';
 import '../../utils/spacing.dart';
 
 import '../app_colors.dart';
 import '../app_text_styles.dart';
 
-ThemeData getDarkTheme({required final BuildContext context}) {
+ThemeData getDarkTheme() {
   return ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColors.backgroundDark,
@@ -26,10 +25,9 @@ ThemeData getDarkTheme({required final BuildContext context}) {
 
     // ─── Text ─────────────────────────────────────────────────────────────
     textTheme: ThemeData.dark().textTheme.apply(
-      bodyColor: AppColors.white,
-      displayColor: AppColors.white,
-      fontFamily: context.currentFont,
-    ),
+          bodyColor: AppColors.white,
+          displayColor: AppColors.white,
+        ),
 
     // ─── Elevated Button ──────────────────────────────────────────────────
     elevatedButtonTheme: ElevatedButtonThemeData(

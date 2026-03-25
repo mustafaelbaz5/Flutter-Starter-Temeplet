@@ -3,14 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/config/app_config.dart';
 import 'core/router/app_router.dart';
 import 'core/router/routes.dart';
-import 'core/themes/cubit/theme_cubit.dart';
+import 'core/settings/cubit/app_settings_cubit.dart';
+import 'core/settings/cubit/app_settings_state.dart';
 import 'core/themes/theme_data/theme_data_dark.dart';
 import 'core/themes/theme_data/theme_data_light.dart';
 
 class KApp extends StatelessWidget {
   const KApp({super.key});
+
   @override
   Widget build(final BuildContext context) {
     return ScreenUtilInit(
@@ -19,20 +22,30 @@ class KApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (final BuildContext context, final Widget? child) {
         return BlocProvider(
-          create: (final BuildContext context) => ThemeCubit(),
-          child: BlocBuilder<ThemeCubit, ThemeMode>(
-            builder: (final BuildContext context, final ThemeMode mode) {
+          create: (final _) => AppSettingsCubit(),
+          child: BlocBuilder<AppSettingsCubit, AppSettingsState>(
+            builder:
+                (final BuildContext context, final AppSettingsState settings) {
               return MaterialApp(
                 localizationsDelegates: context.localizationDelegates,
                 supportedLocales: context.supportedLocales,
-                locale: context.locale,
+                locale: settings.locale, // driven by cubit
                 debugShowCheckedModeBanner: false,
                 initialRoute: Routes.aboutScreen,
                 onGenerateRoute: AppRouter.generateRoute,
-                title: 'App Title',
-                theme: getLightTheme(context: context),
-                darkTheme: getDarkTheme(context: context),
-                themeMode: mode,
+                title: AppConfig.appName,
+                // font family injected into both themes
+                theme: getLightTheme().copyWith(
+                  textTheme: getLightTheme()
+                      .textTheme
+                      .apply(fontFamily: settings.fontFamily),
+                ),
+                darkTheme: getDarkTheme().copyWith(
+                  textTheme: getDarkTheme()
+                      .textTheme
+                      .apply(fontFamily: settings.fontFamily),
+                ),
+                themeMode: settings.themeMode,
               );
             },
           ),

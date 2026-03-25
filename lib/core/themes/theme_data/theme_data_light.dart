@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/extensions/context_ext.dart';
 import '../app_colors.dart';
 import '../app_text_styles.dart';
 
-ThemeData getLightTheme({required final BuildContext context}) {
+ThemeData getLightTheme() {
   return ThemeData(
     brightness: Brightness.light,
     scaffoldBackgroundColor: AppColors.backgroundLight,
@@ -25,10 +24,9 @@ ThemeData getLightTheme({required final BuildContext context}) {
 
     // ─── Text ─────────────────────────────────────────────────────────────
     textTheme: ThemeData.light().textTheme.apply(
-      bodyColor: AppColors.black,
-      displayColor: AppColors.black,
-      fontFamily: context.currentFont,
-    ),
+          bodyColor: AppColors.black,
+          displayColor: AppColors.black,
+        ),
 
     // ─── Elevated Button ──────────────────────────────────────────────────
     elevatedButtonTheme: ElevatedButtonThemeData(

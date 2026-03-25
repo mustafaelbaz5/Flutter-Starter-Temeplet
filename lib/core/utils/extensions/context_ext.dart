@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-import '../../themes/app_font_family.dart';
 import '../../themes/custom_colors.dart';
 
 // ─── Theme ───────────────────────────────────────────────────────────────────
@@ -34,9 +33,6 @@ extension MediaQueryExt on BuildContext {
 extension LocaleExt on BuildContext {
   Locale get currentLocale => EasyLocalization.of(this)!.locale;
   bool get isArabic => currentLocale.languageCode == 'ar';
-  bool get isRTL => isArabic;
-  String get currentFont =>
-      isArabic ? AppFontFamily.tajawal : AppFontFamily.manrope;
 }
 
 // ─── SnackBar ─────────────────────────────────────────────────────────────────
