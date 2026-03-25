@@ -38,13 +38,13 @@ android {
     productFlavors {
         create("development") {
             dimension = "default"
-            resValue("string", "app_name", "K Development")
-            applicationIdSuffix = ".development"
+            applicationIdSuffix = ".dev"
+            resValue("string", "app_name", "My App Dev") // app name with Dev
         }
         create("production") {
             dimension = "default"
-            resValue("string", "app_name", "K Production")
-            applicationIdSuffix = ".production"
+            // no suffix for production
+            resValue("string", "app_name", "My App") // clean app name
         }
     }
 }
