@@ -10,31 +10,31 @@
 
 ## ✨ What's Included
 
-| Feature                 | Description                                      |
-| ----------------------- | ------------------------------------------------ |
+| Feature               | Description                                      |
+| --------------------- | ------------------------------------------------ |
 | 🏗️ Clean Architecture | Scalable structure with separation of concerns   |
-| 🎨 Theme System         | Light/dark mode with custom color system         |
-| 🌍 Localization         | Arabic + English support via EasyLocalization    |
-| 🔒 Secure Storage       | Encrypted local storage via FlutterSecureStorage |
-| 🌐 Networking           | Dio with interceptors, auth token injection      |
-| 🧭 Routing              | Centralized router with slide transitions        |
-| 🎭 Multi-Flavor         | Separate development and production environments |
-| 🔥 Firebase Ready       | Pre-configured for Firebase App Distribution     |
-| 🚀 CI/CD                | GitHub Actions + Fastlane automated pipeline     |
-| ✅ Testing              | Unit, widget tests with full core coverage       |
+| 🎨 Theme System       | Light/dark mode with custom color system         |
+| 🌍 Localization       | Arabic + English support via EasyLocalization    |
+| 🔒 Secure Storage     | Encrypted local storage via FlutterSecureStorage |
+| 🌐 Networking         | Dio with interceptors, auth token injection      |
+| 🧭 Routing            | Centralized router with slide transitions        |
+| 🎭 Multi-Flavor       | Separate development and production environments |
+| 🔥 Firebase Ready     | Pre-configured for Firebase App Distribution     |
+| 🚀 CI/CD              | GitHub Actions + Fastlane automated pipeline     |
+| ✅ Testing            | Unit, widget tests with full core coverage       |
 
 ---
 
 ## 📋 Requirements
 
-| Tool                     | Version                              |
-| ------------------------ | ------------------------------------ |
-| Flutter SDK              | 3.0+                                 |
-| Dart SDK                 | bundled with Flutter                 |
-| Android Studio / VS Code | latest                               |
-| Git                      | any                                  |
-| Ruby                     | 3.0+ (for Fastlane)                  |
-| Firebase CLI             | latest                               |
+| Tool                     | Version                            |
+| ------------------------ | ---------------------------------- |
+| Flutter SDK              | 3.0+                               |
+| Dart SDK                 | bundled with Flutter               |
+| Android Studio / VS Code | latest                             |
+| Git                      | any                                |
+| Ruby                     | 3.0+ (for Fastlane)                |
+| Firebase CLI             | latest                             |
 | make                     | any (Windows:`choco install make`) |
 
 ---
@@ -53,7 +53,7 @@ flutter pub get
 dart run build_runner build --delete-conflicting-outputs
 
 # 4. Run development flavor
-flutter run --flavor development --target lib/main_development.dart
+flutter run --flavor development --target lib/main_dev.dart
 ```
 
 ---
@@ -86,8 +86,8 @@ lib/
 
 ## 📚 Documentation
 
-| Guide                                    | Description                              |
-| ---------------------------------------- | ---------------------------------------- |
+| Guide                                       | Description                              |
+| ------------------------------------------- | ---------------------------------------- |
 | [Setup Guide](docs/SETUP.md)                | Project setup, rename, and first run     |
 | [Firebase &amp; Fastlane](docs/FIREBASE.md) | Firebase project + Fastlane distribution |
 | [CI/CD Workflow](docs/CICD.md)              | GitHub Actions pipeline setup            |
@@ -137,4 +137,4 @@ If this template helped you, please give it a ⭐️ on GitHub!
 
 ---
 
-*Made with ❤️ by Mustafa Elbaz*
+_Made with ❤️ by Mustafa Elbaz_

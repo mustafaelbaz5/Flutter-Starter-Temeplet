@@ -134,7 +134,7 @@ platform :android do
   lane :release_to_firebase do
     sh "flutter clean"
     sh "flutter build apk --release --flavor production \
-        --target lib/main_production.dart --no-tree-shake-icons"
+        --target lib/main_prod.dart --no-tree-shake-icons"
 
     testers_list = [
       "dev@company.com",
@@ -157,7 +157,7 @@ platform :android do
   lane :dev_to_firebase do
     sh "flutter clean"
     sh "flutter build apk --flavor development \
-        --target lib/main_development.dart --no-tree-shake-icons"
+        --target lib/main_dev.dart --no-tree-shake-icons"
 
     testers_list = [
       "dev@company.com",
@@ -305,7 +305,7 @@ release_notes: "v1.0.4 — Fixed login screen, added dark mode",
 
 ## Next Steps
 
-| Guide                              | What's next                               |
-| ---------------------------------- | ----------------------------------------- |
+| Guide                                 | What's next                               |
+| ------------------------------------- | ----------------------------------------- |
 | [CI/CD Workflow](CICD.md)             | Automate distribution with GitHub Actions |
 | [Troubleshooting](TROUBLESHOOTING.md) | Common Firebase and Fastlane issues       |

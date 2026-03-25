@@ -8,13 +8,13 @@ Everything you need to get this project running from scratch.
 
 Install these tools before starting:
 
-| Tool                | How to install                                                                    |
-| ------------------- | --------------------------------------------------------------------------------- |
+| Tool                | How to install                                                                       |
+| ------------------- | ------------------------------------------------------------------------------------ |
 | Flutter SDK 3.0+    | [flutter.dev/docs/get-started/install](https://flutter.dev/docs/get-started/install) |
 | Git                 | [git-scm.com](https://git-scm.com/)                                                  |
 | Android Studio      | [developer.android.com/studio](https://developer.android.com/studio)                 |
 | VS Code (optional)  | [code.visualstudio.com](https://code.visualstudio.com/)                              |
-| make (Windows only) | `choco install make` (run as admin)                                             |
+| make (Windows only) | `choco install make` (run as admin)                                                  |
 
 **Verify your Flutter installation:**
 
@@ -186,10 +186,10 @@ sdkmanager "cmake;3.22.1"
 
 ```bash
 # Development
-flutter run --flavor development --target lib/main_development.dart
+flutter run --flavor development --target lib/main_dev.dart
 
 # Production
-flutter run --flavor production --target lib/main_production.dart
+flutter run --flavor production --target lib/main_prod.dart
 ```
 
 Or using make:
@@ -239,7 +239,7 @@ cd ios && pod install && cd ..
 
 ## ✅ Setup Checklist
 
-- [X] Flutter doctor shows no issues
+- [x] Flutter doctor shows no issues
 - [ ] Repository linked to your own GitHub
 - [ ] Project renamed (app name + bundle ID)
 - [ ] Dependencies installed (`make install`)
@@ -252,8 +252,8 @@ cd ios && pod install && cd ..
 
 ## Next Steps
 
-| Guide                               | What's next                      |
-| ----------------------------------- | -------------------------------- |
+| Guide                                  | What's next                      |
+| -------------------------------------- | -------------------------------- |
 | [Firebase &amp; Fastlane](FIREBASE.md) | Set up Firebase distribution     |
 | [CI/CD Workflow](CICD.md)              | Set up automated pipeline        |
 | [Testing Guide](TESTING.md)            | Learn how to write and run tests |
